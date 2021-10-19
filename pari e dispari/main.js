@@ -4,13 +4,6 @@ let sceltaUser = prompt("Scegli: pari o dispari?")
 
 
 // se l'utente sceglie pari, il pc è dispari
-if (sceltaUser == "pari") {
-    let sceltaPc = "dispari"
-    // console.log(sceltaPc);
-} else if (sceltaUser == "dispari") {
-    let sceltaPc = "pari"
-    // console.log(sceltaPc);
-}
 
 // chiediamo all'utente di inserire un numero da 1 a 5
 let numberUser = parseInt(prompt("Scegli un numero da 1 a 5"))
@@ -34,12 +27,17 @@ console.log(somma);
 
 function pariDispari(sum) {
     if (sum % 2 != 0) {
-        alert("la somma è dispari")
-    } else if (sum % 2 == 0) {
-        alert("la somma è pari")
+        return "dispari"
+    } else {
+        return "pari"
     }
 }
 
-pariDispari(somma)
+let paridispari1 = pariDispari(somma)
 
 // dichiariamo il vincitore
+if (sceltaUser == paridispari1) {
+    console.log("hai vinto");
+} else {
+    console.log("hai perso");
+}
